@@ -1,0 +1,143 @@
+// Copyright 2023 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+
+package google.events.cloud.firestore.v1;
+
+import "google/events/cloud/firestore/v1/data.proto";
+import "google/events/cloudevent.proto";
+
+option csharp_namespace = "Google.Events.Protobuf.Cloud.Firestore.V1";
+option php_namespace = "Google\\Events\\Cloud\\Firestore\\V1";
+option ruby_package = "Google::Events::Cloud::Firestore::V1";
+option (google.events.cloud_event_product) = "Cloud Firestore";
+option (google.events.cloud_event_extension_attribute) = {
+  name: "database"
+  description: "The Firestore database name. The default database name is \"(default)\"."
+};
+option (google.events.cloud_event_extension_attribute) = {
+  name: "namespace"
+  description: "The Firestore database namespace. Applicable to database instances running in Datastore mode only. The default namespace is \"(default)\"."
+};
+option (google.events.cloud_event_extension_attribute) = {
+  name: "document"
+  description: "Pattern to match for the resource."
+};
+
+// The CloudEvent raised when a Firestore document is created.
+message DocumentCreatedEvent {
+  option (google.events.cloud_event_type) =
+      "google.cloud.firestore.document.v1.created";
+  option (google.events.cloud_event_extension_name) = "database";
+  option (google.events.cloud_event_extension_name) = "namespace";
+  option (google.events.cloud_event_extension_name) = "document";
+
+  // The data associated with the event.
+  DocumentEventData data = 1;
+}
+
+// The CloudEvent raised when a Firestore document is updated.
+message DocumentUpdatedEvent {
+  option (google.events.cloud_event_type) =
+      "google.cloud.firestore.document.v1.updated";
+  option (google.events.cloud_event_extension_name) = "database";
+  option (google.events.cloud_event_extension_name) = "namespace";
+  option (google.events.cloud_event_extension_name) = "document";
+
+  // The data associated with the event.
+  DocumentEventData data = 1;
+}
+
+// The CloudEvent raised when a Firestore document is deleted.
+message DocumentDeletedEvent {
+  option (google.events.cloud_event_type) =
+      "google.cloud.firestore.document.v1.deleted";
+  option (google.events.cloud_event_extension_name) = "database";
+  option (google.events.cloud_event_extension_name) = "namespace";
+  option (google.events.cloud_event_extension_name) = "document";
+
+  // The data associated with the event.
+  DocumentEventData data = 1;
+}
+
+// The CloudEvent raised when a Firestore document is created, updated or
+// deleted.
+message DocumentWrittenEvent {
+  option (google.events.cloud_event_type) =
+      "google.cloud.firestore.document.v1.written";
+  option (google.events.cloud_event_extension_name) = "database";
+  option (google.events.cloud_event_extension_name) = "namespace";
+  option (google.events.cloud_event_extension_name) = "document";
+
+  // The data associated with the event.
+  DocumentEventData data = 1;
+}
+
+// The CloudEvent with Auth Context raised when a Firestore document is created.
+message DocumentCreatedEventWithAuthContext {
+  option (google.events.cloud_event_type) =
+      "google.cloud.firestore.document.v1.created.withAuthContext";
+  option (google.events.cloud_event_extension_name) = "database";
+  option (google.events.cloud_event_extension_name) = "namespace";
+  option (google.events.cloud_event_extension_name) = "document";
+  option (google.events.cloud_event_extension_name) = "authtype";
+  option (google.events.cloud_event_extension_name) = "authid";
+
+  // The data associated with the event.
+  DocumentEventData data = 1;
+}
+
+// The CloudEvent with Auth Context raised when a Firestore document is updated.
+message DocumentUpdatedEventWithAuthContext {
+  option (google.events.cloud_event_type) =
+      "google.cloud.firestore.document.v1.updated.withAuthContext";
+  option (google.events.cloud_event_extension_name) = "database";
+  option (google.events.cloud_event_extension_name) = "namespace";
+  option (google.events.cloud_event_extension_name) = "document";
+  option (google.events.cloud_event_extension_name) = "authtype";
+  option (google.events.cloud_event_extension_name) = "authid";
+
+  // The data associated with the event.
+  DocumentEventData data = 1;
+}
+
+// The CloudEvent with Auth Context raised when a Firestore document is deleted.
+message DocumentDeletedEventWithAuthContext {
+  option (google.events.cloud_event_type) =
+      "google.cloud.firestore.document.v1.deleted.withAuthContext";
+  option (google.events.cloud_event_extension_name) = "database";
+  option (google.events.cloud_event_extension_name) = "namespace";
+  option (google.events.cloud_event_extension_name) = "document";
+  option (google.events.cloud_event_extension_name) = "authtype";
+  option (google.events.cloud_event_extension_name) = "authid";
+
+  // The data associated with the event.
+  DocumentEventData data = 1;
+}
+
+// The CloudEvent with Auth Context raised when a Firestore document is created,
+// updated or deleted.
+message DocumentWrittenEventWithAuthContext {
+  option (google.events.cloud_event_type) =
+      "google.cloud.firestore.document.v1.written.withAuthContext";
+  option (google.events.cloud_event_extension_name) = "database";
+  option (google.events.cloud_event_extension_name) = "namespace";
+  option (google.events.cloud_event_extension_name) = "document";
+  option (google.events.cloud_event_extension_name) = "authtype";
+  option (google.events.cloud_event_extension_name) = "authid";
+
+  // The data associated with the event.
+  DocumentEventData data = 1;
+}

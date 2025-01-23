@@ -1,0 +1,95 @@
+{
+  "defaults": {
+    "region": "europe-west3",
+    "maxInstances": "1",
+    "memoryLimit": "256Mi"
+  },
+  "functions": [
+    {
+      "name": "oncreatelog",
+      "signatureType": "cloudevent",
+      "trigger": {
+        "type": "google.cloud.firestore.document.v1.created",
+        "database": "(default)",
+        "namespace": "(default)",
+        "documentPath": "todos/{todoId}/logs/{logId}",
+        "eventDataContentType": "application/protobuf"
+      }
+    },
+    {
+      "name": "oncreatetodo",
+      "signatureType": "cloudevent",
+      "trigger": {
+        "type": "google.cloud.firestore.document.v1.created",
+        "database": "(default)",
+        "namespace": "(default)",
+        "documentPath": "todos/{todoId}",
+        "eventDataContentType": "application/protobuf"
+      }
+    },
+    {
+      "name": "onupdatetodo",
+      "signatureType": "cloudevent",
+      "trigger": {
+        "type": "google.cloud.firestore.document.v1.updated",
+        "database": "(default)",
+        "namespace": "(default)",
+        "documentPath": "todos/{todoId}",
+        "eventDataContentType": "application/protobuf"
+      }
+    },
+    {
+      "name": "ondeletetodo",
+      "signatureType": "cloudevent",
+      "trigger": {
+        "type": "google.cloud.firestore.document.v1.deleted",
+        "database": "(default)",
+        "namespace": "(default)",
+        "documentPath": "todos/{todoId}",
+        "eventDataContentType": "application/protobuf"
+      }
+    },
+    {
+      "name": "onwritetodo",
+      "signatureType": "cloudevent",
+      "trigger": {
+        "type": "google.cloud.firestore.document.v1.written",
+        "database": "(default)",
+        "namespace": "(default)",
+        "documentPath": "todos/{todoId}",
+        "eventDataContentType": "application/protobuf"
+      }
+    },
+    {
+      "name": "oncreatesubmission",
+      "signatureType": "cloudevent",
+      "trigger": {
+        "type": "google.cloud.firestore.document.v1.created",
+        "database": "(default)",
+        "namespace": "(default)",
+        "documentPath": "submissions/{submissionId}",
+        "eventDataContentType": "application/protobuf"
+      }
+    },
+    {
+      "name": "updateTodo",
+      "signatureType": "http",
+      "trigger": null
+    },
+    {
+      "name": "updateTodoRequest",
+      "signatureType": "http",
+      "trigger": null
+    },
+    {
+      "name": "updateTodoLogger",
+      "signatureType": "http",
+      "trigger": null
+    },
+    {
+      "name": "updateTodoRequestLogger",
+      "signatureType": "http",
+      "trigger": null
+    }
+  ]
+}
