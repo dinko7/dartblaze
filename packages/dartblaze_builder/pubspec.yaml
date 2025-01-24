@@ -1,8 +1,8 @@
 name: dartblaze_builder
-description: A starting point for Dart libraries or applications.
-version: 1.0.0
-publish_to: none
-# repository: https://github.com/my_org/my_repo
+description: Code generator for DartBlaze.
+version: 0.0.1
+repository: https://github.com/dinko7/dartblaze
+homepage: https://dartblaze.com/
 
 environment:
   sdk: ^3.4.1

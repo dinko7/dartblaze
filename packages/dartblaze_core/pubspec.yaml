@@ -1,7 +1,8 @@
 name: dartblaze_core
-description: A starting point for Dart libraries or applications.
-version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+description: Core components shared between DartBlaze packages.
+version: 0.0.1
+repository: https://github.com/dinko7/dartblaze
+homepage: https://dartblaze.com/
 
 environment:
   sdk: ^3.4.1
