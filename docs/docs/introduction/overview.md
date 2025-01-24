@@ -5,7 +5,7 @@ description: Learn about Dartblaze and its core features
 
 # Introduction
 
-Dartblaze lets you write Firebase Cloud Functions in pure Dart, bringing type safety and modern language features to your serverless functions.
+Dartblaze allows you write Firebase Cloud Functions in pure Dart, bringing type safety, language, ecosystem and packages you already know and love from Flutter to the backend.
 
 ## Why Dartblaze?
 
