@@ -1,5 +1,5 @@
-name: dartblaze_core
-description: Core components shared between DartBlaze packages.
+name: dartblaze_shared
+description: Shared components between DartBlaze packages.
 version: 0.0.1
 repository: https://github.com/dinko7/dartblaze
 homepage: https://dartblaze.com/

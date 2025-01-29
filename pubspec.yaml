@@ -6,5 +6,5 @@ environment:
 
 workspace:
   - packages/dartblaze
-  - packages/dartblaze_core
+  - packages/dartblaze_shared
   - packages/dartblaze_builder

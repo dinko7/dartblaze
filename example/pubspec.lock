@@ -220,10 +220,10 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
-  dartblaze_core:
+  dartblaze_shared:
     dependency: transitive
     description:
-      path: "../packages/dartblaze_core"
+      path: "../packages/dartblaze_shared"
       relative: true
     source: path
     version: "0.0.1"
