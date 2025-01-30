@@ -209,9 +209,10 @@ packages:
   dartblaze:
     dependency: "direct main"
     description:
-      path: "../packages/dartblaze"
-      relative: true
-    source: path
+      name: dartblaze
+      sha256: a341efb54c723e4b9dce9ca96e3155e3d1820e91d7439fe9cefe940ccbbbb1bc
+      url: "https://pub.dev"
+    source: hosted
     version: "0.0.1"
   dartblaze_builder:
     dependency: "direct dev"
@@ -223,9 +224,10 @@ packages:
   dartblaze_shared:
     dependency: transitive
     description:
-      path: "../packages/dartblaze_shared"
-      relative: true
-    source: path
+      name: dartblaze_shared
+      sha256: "7c2f5942981a662132b361f3e2620a673274d2eace0d8f48c871d7d70a1f536e"
+      url: "https://pub.dev"
+    source: hosted
     version: "0.0.1"
   ed25519_edwards:
     dependency: transitive

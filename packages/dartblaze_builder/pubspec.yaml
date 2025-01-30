@@ -12,10 +12,8 @@ dependencies:
   analyzer: ">=5.12.0 <7.0.0"
   build: ^2.0.0
   build_config: ">=0.4.3 <2.0.0"
-  dartblaze:
-    path: ../dartblaze
-  dartblaze_shared:
-    path: ../dartblaze_shared
+  dartblaze: ^0.0.1
+  dartblaze_shared: ^0.0.1
   dart_style: ^2.0.0
   functions_framework: ^0.4.3+1
   meta: ^1.2.4
