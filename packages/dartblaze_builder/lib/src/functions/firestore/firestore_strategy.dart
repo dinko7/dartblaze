@@ -1,5 +1,5 @@
 import 'package:analyzer/dart/element/element.dart';
-import 'package:dartblaze/blaze.dart';
+import 'package:dartblaze/dartblaze.dart';
 import 'package:dartblaze_builder/src/common/function_strategy.dart';
 import 'package:dartblaze_builder/src/utils/type_check_utils.dart';
 import 'package:source_gen/source_gen.dart';

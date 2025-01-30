@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
 
 const _defaultImports = [
-  "'package:dartblaze/blaze.dart'",
+  "'package:dartblaze/dartblaze.dart'",
   "'package:functions_framework/serve.dart'",
 ];
 

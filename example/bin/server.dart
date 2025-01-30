@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-import 'package:dartblaze/blaze.dart';
+import 'package:dartblaze/dartblaze.dart';
 import 'package:example/functions/firestore_triggers_todo.dart' as f1;
 import 'package:example/functions/http.dart' as f3;
 import 'package:example/functions/on_create_log.dart' as f0;

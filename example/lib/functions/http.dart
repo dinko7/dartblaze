@@ -1,4 +1,4 @@
-import 'package:dartblaze/blaze.dart';
+import 'package:dartblaze/dartblaze.dart';
 import 'package:example/models/todo.dart';
 import 'package:functions_framework/functions_framework.dart';
 import 'package:shelf/shelf.dart';

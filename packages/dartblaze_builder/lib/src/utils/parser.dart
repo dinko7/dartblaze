@@ -1,5 +1,5 @@
 import 'package:analyzer/dart/element/element.dart';
-import 'package:dartblaze/blaze.dart';
+import 'package:dartblaze/dartblaze.dart';
 import 'package:source_gen/source_gen.dart';
 
 Iterable<AnnotatedElement> extractAnnotatedElementFromLibrary(

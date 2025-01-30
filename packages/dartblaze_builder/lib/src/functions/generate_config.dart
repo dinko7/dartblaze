@@ -4,7 +4,7 @@ import 'package:dartblaze_builder/src/common/function_config_builder.dart';
 import 'package:dartblaze_builder/src/common/function_strategy.dart';
 import 'package:dartblaze_builder/src/functions/firestore/firestore_config_builder.dart';
 import 'package:dartblaze_builder/src/functions/http/http_config_builder.dart';
-import 'package:dartblaze_core/config/function_config.dart';
+import 'package:dartblaze_shared/config/function_config.dart';
 import 'package:build/build.dart';
 
 import 'firestore/firestore_strategy.dart';

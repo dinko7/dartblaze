@@ -1,4 +1,4 @@
-import 'package:dartblaze/blaze.dart';
+import 'package:dartblaze/dartblaze.dart';
 import 'package:dart_firebase_admin/messaging.dart';
 import 'package:functions_framework/functions_framework.dart';
 
