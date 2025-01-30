@@ -15,11 +15,13 @@ dependencies:
   dartblaze: ^0.0.1
   dartblaze_shared: ^0.0.1
   dart_style: ^2.0.0
+  shelf: ^1.4.2
   functions_framework: ^0.4.3+1
   meta: ^1.2.4
   path: ^1.9.0
   source_gen: ^1.0.0
   glob: ^2.1.2
+  collection: ^1.19.1
 
 dev_dependencies:
   test: ^1.24.0
