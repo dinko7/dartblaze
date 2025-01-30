@@ -154,10 +154,10 @@ packages:
     dependency: transitive
     description:
       name: collection
-      sha256: a1ace0a119f20aabc852d165077c036cd864315bd99b7eaa10a60100341941bf
+      sha256: "2f5709ae4d3d59dd8f7cd309b4e023046b57d8a6c82130785d2b0e5868084e76"
       url: "https://pub.dev"
     source: hosted
-    version: "1.19.0"
+    version: "1.19.1"
   convert:
     dependency: transitive
     description:
@@ -217,18 +217,19 @@ packages:
   dartblaze_builder:
     dependency: "direct dev"
     description:
-      path: "../packages/dartblaze_builder"
-      relative: true
-    source: path
-    version: "0.0.1"
+      name: dartblaze_builder
+      sha256: "595288bb94e0b05c3d8d5ba1ed6ed98784684f1e4b959c31d1c8d30616a9a37b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.1+1"
   dartblaze_shared:
     dependency: transitive
     description:
       name: dartblaze_shared
-      sha256: "7c2f5942981a662132b361f3e2620a673274d2eace0d8f48c871d7d70a1f536e"
+      sha256: f83242ece546c8747a3e8ed8d4a7dcbe30c583649deb406243d337fcca78b6f8
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.1"
+    version: "0.0.1+1"
   ed25519_edwards:
     dependency: transitive
     description:

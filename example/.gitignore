@@ -14,3 +14,4 @@ service-account.json
 # Generated files
 /lib/**/*.freezed.dart
 /lib/**/*.g.dart
+../functions.json
