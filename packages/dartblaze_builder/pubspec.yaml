@@ -1,6 +1,6 @@
 name: dartblaze_builder
 description: Code generator for DartBlaze.
-version: 0.0.1
+version: 0.0.1+1
 repository: https://github.com/dinko7/dartblaze
 homepage: https://dartblaze.com/
 
@@ -13,7 +13,7 @@ dependencies:
   build: ^2.0.0
   build_config: ">=0.4.3 <2.0.0"
   dartblaze: ^0.0.1
-  dartblaze_shared: ^0.0.1
+  dartblaze_shared: ^0.0.1+1
   dart_style: ^2.0.0
   shelf: ^1.4.2
   functions_framework: ^0.4.3+1
