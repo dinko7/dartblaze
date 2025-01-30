@@ -9,7 +9,7 @@ environment:
 resolution: workspace
 
 dependencies:
-  meta: 1.15.0
+  meta: ^1.15.0
   dart_firebase_admin: ^0.3.0
   fixnum: ^1.1.0
   functions_framework: ^0.4.3+1
