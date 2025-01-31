@@ -37,3 +37,15 @@ Future<void> onwritetodo(WriteDocumentChange change, RequestContext context,
   context.logger.debug('before: $before');
   context.logger.debug('after: $after');
 }
+
+@OnDocumentCreated('todos/{todoId}/logs/{logId}')
+Future<void> oncreatelog(
+  DocumentSnapshot snapshot,
+  RequestContext context, {
+  required String todoId,
+  required String logId,
+}) async {
+  context.logger.debug('todoId: $todoId');
+  context.logger.debug('logId: $logId');
+  context.logger.debug('data: ${snapshot.data()}');
+}
