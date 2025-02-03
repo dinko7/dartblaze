@@ -4,7 +4,16 @@ import { withSidebar } from 'vitepress-sidebar';
 const vitePressOptions = {
   title: "Dartblaze Docs",
   description: "Dartblaze Docs",
+  markdown: {
+    image: {
+      lazyLoading: true
+    }
+  },
   themeConfig: {
+    logo: "/logo-centered.png",
+    footer: {
+      copyright: 'Copyright © 2024 Dartblaze Authors',
+    },
     socialLinks: [
       {
           icon: {
@@ -12,9 +21,9 @@ const vitePressOptions = {
           },
           link: "https://discord.app"
       },
-      {icon: "discord", link: "https://discord.app/invite"},
+      {icon: "discord", link: "https://discord.gg/WMQbY57G"},
       {icon: "twitter", link: "https://x.com/"},
-      {icon: "github", link: "https://github.com/"}
+      {icon: "github", link: "https://github.com/dinko7/dartblaze"}
     ],
     homepage: '/introduction/overview',
   },
