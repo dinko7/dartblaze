@@ -17,7 +17,7 @@ This guide covers everything you need to know about deploying Dartblaze function
     This will generate the required bolierplate code and the deployment configuration.
 
     ::: warning
-    You must run build_runner every time your add or remove a functions in order to generate the new deployment config.
+    You must run `build_runner` every time your add or remove a functions in order to generate the new deployment config.
     :::
 
 2. Deploy the function
@@ -27,4 +27,8 @@ This guide covers everything you need to know about deploying Dartblaze function
 
     ::: warning
     You can only deploy one function at a time
+    :::
+
+    ::: tip
+    By default, your functions will be deployed to `europe-west3` region. As a temporary workaround, please modify `functions.json` to deploy to another region closer to your database.
     :::
