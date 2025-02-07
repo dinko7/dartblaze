@@ -14,4 +14,12 @@ service-account.json
 # Generated files
 /lib/**/*.freezed.dart
 /lib/**/*.g.dart
+
+# Deployment files
 functions.json
+Dockerfile
+
+# Project files (comment for real project)
+.firebaserc
+firebase.json
+project.json
