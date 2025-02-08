@@ -12,29 +12,10 @@ enum SignatureType {
 }
 
 @JsonSerializable()
-class DeploymentConfig {
-  final String region;
-  final String maxInstances;
-  final String memoryLimit;
-
-  DeploymentConfig({
-    required this.region,
-    required this.maxInstances,
-    required this.memoryLimit,
-  });
-
-  factory DeploymentConfig.fromJson(Map<String, dynamic> json) =>
-      _$DeploymentConfigFromJson(json);
-  Map<String, dynamic> toJson() => _$DeploymentConfigToJson(this);
-}
-
-@JsonSerializable()
 class FunctionsConfig {
-  final DeploymentConfig defaults;
   final List<FunctionConfig> functions;
 
   FunctionsConfig({
-    required this.defaults,
     required this.functions,
   });
 
@@ -43,7 +24,7 @@ class FunctionsConfig {
   Map<String, dynamic> toJson() => _$FunctionsConfigToJson(this);
 }
 
-@JsonSerializable()
+@JsonSerializable(includeIfNull: false)
 class FunctionConfig {
   final String name;
   final SignatureType signatureType;
@@ -63,17 +44,11 @@ class FunctionConfig {
 @JsonSerializable()
 class TriggerConfig {
   final String type;
-  final String database;
-  final String namespace;
   final String documentPath;
-  final String eventDataContentType;
 
   TriggerConfig({
     required this.type,
-    required this.database,
-    required this.namespace,
     required this.documentPath,
-    required this.eventDataContentType,
   });
 
   factory TriggerConfig.fromJson(Map<String, dynamic> json) =>

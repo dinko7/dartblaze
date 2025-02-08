@@ -6,24 +6,8 @@ part of 'function_config.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-DeploymentConfig _$DeploymentConfigFromJson(Map<String, dynamic> json) =>
-    DeploymentConfig(
-      region: json['region'] as String,
-      maxInstances: json['maxInstances'] as String,
-      memoryLimit: json['memoryLimit'] as String,
-    );
-
-Map<String, dynamic> _$DeploymentConfigToJson(DeploymentConfig instance) =>
-    <String, dynamic>{
-      'region': instance.region,
-      'maxInstances': instance.maxInstances,
-      'memoryLimit': instance.memoryLimit,
-    };
-
 FunctionsConfig _$FunctionsConfigFromJson(Map<String, dynamic> json) =>
     FunctionsConfig(
-      defaults:
-          DeploymentConfig.fromJson(json['defaults'] as Map<String, dynamic>),
       functions: (json['functions'] as List<dynamic>)
           .map((e) => FunctionConfig.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -31,7 +15,6 @@ FunctionsConfig _$FunctionsConfigFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$FunctionsConfigToJson(FunctionsConfig instance) =>
     <String, dynamic>{
-      'defaults': instance.defaults,
       'functions': instance.functions,
     };
 
@@ -48,7 +31,7 @@ Map<String, dynamic> _$FunctionConfigToJson(FunctionConfig instance) =>
     <String, dynamic>{
       'name': instance.name,
       'signatureType': _$SignatureTypeEnumMap[instance.signatureType]!,
-      'trigger': instance.trigger,
+      if (instance.trigger case final value?) 'trigger': value,
     };
 
 const _$SignatureTypeEnumMap = {
@@ -59,17 +42,11 @@ const _$SignatureTypeEnumMap = {
 TriggerConfig _$TriggerConfigFromJson(Map<String, dynamic> json) =>
     TriggerConfig(
       type: json['type'] as String,
-      database: json['database'] as String,
-      namespace: json['namespace'] as String,
       documentPath: json['documentPath'] as String,
-      eventDataContentType: json['eventDataContentType'] as String,
     );
 
 Map<String, dynamic> _$TriggerConfigToJson(TriggerConfig instance) =>
     <String, dynamic>{
       'type': instance.type,
-      'database': instance.database,
-      'namespace': instance.namespace,
       'documentPath': instance.documentPath,
-      'eventDataContentType': instance.eventDataContentType,
     };

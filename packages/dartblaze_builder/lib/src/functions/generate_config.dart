@@ -11,12 +11,10 @@ import 'firestore/firestore_strategy.dart';
 import 'http/http_strategy.dart';
 
 class FunctionsConfigGenerator {
-  final DeploymentConfig defaults;
   final Map<Type, FunctionConfigBuilder> _builders;
 
-  FunctionsConfigGenerator({
-    required this.defaults,
-  }) : _builders = {
+  FunctionsConfigGenerator()
+      : _builders = {
           HttpFunctionData: HttpFunctionConfigBuilder(),
           FirestoreEventFunctionData: FirestoreEventConfigBuilder(),
         };
@@ -30,10 +28,7 @@ class FunctionsConfigGenerator {
       return builder.buildConfig(entry);
     }).toList();
 
-    final config = FunctionsConfig(
-      defaults: defaults,
-      functions: configs,
-    );
+    final config = FunctionsConfig(functions: configs);
 
     return JsonEncoder.withIndent('  ').convert(config.toJson());
   }
@@ -43,14 +38,7 @@ Future<void> generateConfig(
   Map<String, (int, FunctionData)> entries,
   BuildStep buildStep,
 ) async {
-  //TODO: maybe get this from CLI
-  final generator = FunctionsConfigGenerator(
-    defaults: DeploymentConfig(
-      region: 'europe-west3',
-      maxInstances: '1',
-      memoryLimit: '256Mi',
-    ),
-  );
+  final generator = FunctionsConfigGenerator();
 
   final configJson =
       generator.generate(entries.values.map((e) => e.$2).toList());

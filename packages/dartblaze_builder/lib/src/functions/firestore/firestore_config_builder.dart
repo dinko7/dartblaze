@@ -16,10 +16,7 @@ class FirestoreEventConfigBuilder implements FunctionConfigBuilder {
       signatureType: SignatureType.cloudEvent,
       trigger: TriggerConfig(
         type: data.firestoreDocumentEventType.type,
-        database: '(default)',
-        namespace: '(default)',
         documentPath: data.pathPattern,
-        eventDataContentType: 'application/protobuf',
       ),
     );
   }
