@@ -17,6 +17,12 @@ Welcome to Dartblaze! This guide will help you set up your development environme
 - gcloud CLI tools installed
   - [install guide](https://cloud.google.com/sdk/docs/install)
 
+## Google Cloud Platform setup
+
+Before you start using Dartblaze, please [enable](https://cloud.google.com/apis/docs/getting-started#enabling_apis) the following APIs in the GCP console:
+- Cloud Run API
+- EventArc API
+
 ## Installation
 
 //__TODO:__ download from link and install, macOS only supported for now
