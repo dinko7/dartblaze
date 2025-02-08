@@ -218,18 +218,18 @@ packages:
     dependency: "direct dev"
     description:
       name: dartblaze_builder
-      sha256: "595288bb94e0b05c3d8d5ba1ed6ed98784684f1e4b959c31d1c8d30616a9a37b"
+      sha256: "86562da3bc90c18be08e1837dc0a2c667203c992f2aa2411fad0c43c8fdd5807"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.1+1"
+    version: "0.0.2"
   dartblaze_shared:
     dependency: transitive
     description:
       name: dartblaze_shared
-      sha256: f83242ece546c8747a3e8ed8d4a7dcbe30c583649deb406243d337fcca78b6f8
+      sha256: f9588380d2eacd198194ad555f0920975fa8ca94963fd0df5499ef46f75e14ba
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.1+1"
+    version: "0.0.2"
   ed25519_edwards:
     dependency: transitive
     description:
