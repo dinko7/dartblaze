@@ -9,7 +9,7 @@ Welcome to Dartblaze! This guide will help you set up your development environme
 
 ## Prerequisites
 
-- Dart SDK (3.5.0 or higher)
+- Dart SDK (3.6.0 or higher)
 - Firebase project with enabled billing (Blaze plan)
   - [Enable billing guide](https://docs.firerun.io/getting-started/upgrading-from-the-firebase-spark-plan-to-the-blaze-plan-tled)
 - firebase CLI tools installed
