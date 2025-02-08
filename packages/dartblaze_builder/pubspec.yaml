@@ -13,7 +13,8 @@ dependencies:
   build: ^2.0.0
   build_config: ">=0.4.3 <2.0.0"
   dartblaze: ^0.0.1
-  dartblaze_shared: ^0.0.1+1
+  dartblaze_shared:
+    path: ../dartblaze_shared
   dart_style: ^2.0.0
   shelf: ^1.4.2
   functions_framework: ^0.4.3+1
