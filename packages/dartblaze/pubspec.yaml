@@ -1,0 +1,21 @@
+name: dartblaze
+description: DartBlaze is a Dart library for building Firebase Cloud Functions.
+version: 0.0.1
+repository: https://github.com/dinko7/dartblaze
+homepage: https://dartblaze.com/
+
+environment:
+  sdk: ^3.6.0
+resolution: workspace
+
+dependencies:
+  meta: ^1.15.0
+  dart_firebase_admin: ^0.3.0
+  shelf: ^1.4.2
+  fixnum: ^1.1.0
+  functions_framework: ^0.4.3+1
+  protobuf: ^3.1.0
+
+dev_dependencies:
+  lints: ^4.0.0
+  test: ^1.24.0

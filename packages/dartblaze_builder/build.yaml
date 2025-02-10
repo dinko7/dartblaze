@@ -1,0 +1,7 @@
+builders:
+  blaze_builder:
+    import: "package:dartblaze_builder/builder.dart"
+    builder_factories: ["dartblazeBuilder"]
+    build_extensions: { "$lib$": ["bin/server.dart"] }
+    auto_apply: dependents
+    build_to: source
