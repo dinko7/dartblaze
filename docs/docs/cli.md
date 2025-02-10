@@ -2,16 +2,9 @@
 
 Dartblaze CLI is a powerful command-line interface tool for managing Firebase and Google Cloud projects and functions.
 
-## Getting Started
-
-Before you begin using Dartblaze CLI, ensure you have:
-- Firebase account
-- Google Cloud account
-- Proper authentication credentials
-
 ## Installation
 
-::: tip
+::: info
 Installation instructions coming soon
 :::
 
@@ -143,6 +136,10 @@ Deploy a Cloud Function to your active project. If no function name is specified
 
 ::: warning
 Multi-region Firestore deployments are not available at this time.
+:::
+
+::: danger
+Make sure to clear your GCP storage after successful deployment(s). Deployment uses Cloud Build service which stores a copy of your code in Cloud Storage.<br /><br />Not clearning storage regularly will result in increased bill.
 :::
 
 ### Example

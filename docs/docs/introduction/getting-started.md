@@ -25,7 +25,9 @@ Before you start using Dartblaze, please [enable](https://cloud.google.com/apis/
 
 ## Installation
 
-//__TODO:__ download from link and install, macOS only supported for now
+::: info
+Installation instructions coming soon
+:::
 
 ## Setup the CLI
 
