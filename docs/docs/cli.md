@@ -96,15 +96,13 @@ dartblaze init --email developer@company.com --project-id my-cloud-project
 dartblaze use <project-id>
 ```
 
-### Options
-
-| Option | Required | Description |
-|--------|----------|-------------|
-| `--projectId` | No | The project ID to use |
-
 ### Description
 
 Set the active project for Firebase and Google Cloud operations. All subsequent commands will be executed in the context of this project.
+
+::: warning
+Use command can only be used after the project has been initialized with `init` command.
+:::
 
 ### Example
 
@@ -129,23 +127,28 @@ Display a list of all Firebase projects associated with your account. Requires a
 ### Usage
 
 ```bash
-dartblaze deploy --function <function-name>
+dartblaze deploy <function-name> --region=<database_region>
 ```
 
 ### Options
 
-| Option | Alias | Required | Description |
-|--------|-------|----------|-------------|
-| `--function` | `-f` | No | Function name to deploy |
+| Option | Required | Description |
+|--------|----------|-------------|
+| `--region` | Yes | Region of the database |
+| `--max-instances` | No | Maximum number of instances for this function, defaults to 1 |
 
 ### Description
 
 Deploy a Cloud Function to your active project. If no function name is specified, all functions will be deployed.
 
+::: warning
+Multi-region Firestore deployments are not available at this time.
+:::
+
 ### Example
 
 ```bash
-dartblaze deploy --function authFunction
+dartblaze deploy authFunction --region=europe-west3
 ```
 
 ## delete
@@ -153,14 +156,8 @@ dartblaze deploy --function authFunction
 ### Usage
 
 ```bash
-dartblaze delete --function-name <function-name>
+dartblaze delete <function-name>
 ```
-
-### Options
-
-| Option | Alias | Required | Description |
-|--------|-------|----------|-------------|
-| `--function-name` | `-f` | No | Function name to delete |
 
 ### Description
 
@@ -173,5 +170,5 @@ Delete a Cloud Function and its associated triggers. Use with caution as this ac
 ### Example
 
 ```bash
-dartblaze delete --function-name oldFunction
+dartblaze delete oldFunction
 ```

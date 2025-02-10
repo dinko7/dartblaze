@@ -22,13 +22,9 @@ This guide covers everything you need to know about deploying Dartblaze function
 
 2. Deploy the function
     ```bash
-    dartblaze deploy -f <function_name>
+    dartblaze deploy <function-name> --region=<database_region>
     ```
 
     ::: warning
     You can only deploy one function at a time
-    :::
-
-    ::: tip
-    By default, your functions will be deployed to `europe-west3` region. As a temporary workaround, please modify `functions.json` to deploy to another region closer to your database.
     :::

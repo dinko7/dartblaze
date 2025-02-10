@@ -17,7 +17,6 @@ service-account.json
 
 # Deployment files
 functions.json
-Dockerfile
 
 # Project files (comment for real project)
 .firebaserc
