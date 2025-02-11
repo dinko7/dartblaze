@@ -1,12 +1,19 @@
 # Dartblaze
 
-Dartblaze allows you write Firebase Cloud Functions in pure Dart, bringing type safety, language, ecosystem and packages you already know and love from Flutter to the backend.
+Dartblaze allows you to write Firebase Cloud Functions in pure Dart, bringing type safety, language, ecosystem, and packages you already know and love from Flutter to the backend.
 
-### Installation
+## Packages
+
+- [dartblaze](https://pub.dev/packages/dartblaze) - Core parts fo the framework
+- [dartblaze_builder](https://pub.dev/packages/dartblaze_builder) - Code generator for the framework
+- [Dartblaze_shared](https://pub.dev/packages/dartblaze_shared) - Shared parts of the framework
+
+
+## Installation
 
 See [docs](https://docs.dartblaze.com/introduction/getting-started) to install the CLI and get started.
 
-### Usage
+## Usage
 
 Write your cloud functions using the same syntax as in Node:
 
@@ -23,11 +30,11 @@ Future<void> oncreatetodo(
 }
 ```
 
-Then, run the generator `dart run build_runner build --delete-conflicting-output` to generate the neccesary code.
+Then, run the generator `dart run build_runner build --delete-conflicting-output` to generate the necessary code.
 
 Finally, deploy using the CLI: 
 ```bash
-dartblaze deploy -f <function_name>
+dartblaze deploy <function_name> --region=<region>
 ```
 
 See [docs](https://docs.dartblaze.com/) for more info.
