@@ -6,7 +6,7 @@ Dartblaze allows you to write Firebase Cloud Functions in pure Dart, bringing ty
 
 - [dartblaze](https://pub.dev/packages/dartblaze) - Core parts fo the framework
 - [dartblaze_builder](https://pub.dev/packages/dartblaze_builder) - Code generator for the framework
-- [Dartblaze_shared](https://pub.dev/packages/dartblaze_shared) - Shared parts of the framework
+- [dartblaze_shared](https://pub.dev/packages/dartblaze_shared) - Shared parts of the framework
 
 
 ## Installation
