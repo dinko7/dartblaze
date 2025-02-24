@@ -4,9 +4,40 @@ Dartblaze CLI is a powerful command-line interface tool for managing Firebase an
 
 ## Installation
 
-::: info
-Installation instructions coming soon
-:::
+1. Download the latest `dartblaze` binary from [GitHub Releases](your-release-url)
+2. Open Terminal and navigate to your downloads folder:
+   ```bash
+   cd ~/Downloads
+   ```
+3. Move the binary to your local bin:
+   ```bash
+   sudo mv ./dartblaze /usr/local/bin/
+   ```
+4. Verify the installation:
+   ```bash
+   dartblaze doctor
+   ```
+
+   You should see the current version number of DartBlaze CLI.
+
+## Updating
+
+To update DartBlaze CLI:
+
+1. Download the latest version
+2. Replace the existing binary using the same steps as installation
+3. Verify the new version is installed:
+   ```bash
+   dartblaze doctor
+   ```
+
+## Uninstall
+
+To remove DartBlaze CLI:
+
+```bash
+sudo rm /usr/local/bin/dartblaze
+```
 
 ## Basic Usage
 
@@ -55,6 +86,19 @@ dartblaze logout
 ### Description
 
 Sign out from Firebase and Google Cloud services and remove local authentication credentials.
+
+## new
+
+### Usage
+
+```bash
+dartblaze new project_name
+```
+
+### Description
+
+Creates a new Dartblaze project with example cloud functions.
+`init` must be run afterwards to finish the project setup.
 
 ## init
 
