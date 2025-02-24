@@ -4,7 +4,7 @@ Dartblaze CLI is a powerful command-line interface tool for managing Firebase an
 
 ## Installation
 
-1. Download the latest `dartblaze` binary from [GitHub Releases](your-release-url)
+1. Download the latest `dartblaze` binary from [GitHub Releases](https://github.com/dinko7/dartblaze/releases)
 2. Open Terminal and navigate to your downloads folder:
    ```bash
    cd ~/Downloads

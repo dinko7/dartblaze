@@ -23,16 +23,11 @@ Before you start using Dartblaze, please [enable](https://cloud.google.com/apis/
 - Cloud Run API
 - EventArc API
 
-## Installation
-
-::: info
-Installation instructions coming soon
-:::
-
 ## Setup the CLI
 
-1. Run the `dartblaze doctor` command to make sure you have all the dependendencies installed locally
-2. Login using the `dartblaze login` command
+1. [Install the CLI](../cli.md#installation)
+2. Run the `dartblaze doctor` command to make sure you have all the dependendencies installed locally
+3. Login using the `dartblaze login` command
 
 
 ::: tip
