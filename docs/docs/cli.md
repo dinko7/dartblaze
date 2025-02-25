@@ -9,11 +9,15 @@ Dartblaze CLI is a powerful command-line interface tool for managing Firebase an
    ```bash
    cd ~/Downloads
    ```
-3. Move the binary to your local bin:
+3. Make the binary executable:
+   ```bash
+   chmod +x dartblaze
+   ```
+4. Move the binary to your local bin:
    ```bash
    sudo mv ./dartblaze /usr/local/bin/
    ```
-4. Verify the installation:
+5. Verify the installation:
    ```bash
    dartblaze doctor
    ```

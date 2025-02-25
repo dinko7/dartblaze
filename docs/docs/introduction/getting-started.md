@@ -31,17 +31,19 @@ Before you start using Dartblaze, please [enable](https://cloud.google.com/apis/
 
 
 ::: tip
-The `login` command will also prompt you to login into `firebase` and `gcloud` if you are not already logged in
+The `login` command will also prompt you to login into `firebase` and `gcloud` if you are not already logged in.
 :::
    
 
 ## Creating Your First Project
 
-1. List out your projects using `dartblaze projects:list`.
+1. Create a new project by using `dartblaze new <project_name>`
+
+2. List out your projects using `dartblaze projects:list`.
   
     Copy the project id of the project you would like to use.
 
-2. Initialize the project
+3. Initialize the project
 
     ```bash
     dartblaze init -e <account_email> -p <project_id> 
