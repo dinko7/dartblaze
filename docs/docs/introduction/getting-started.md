@@ -23,6 +23,8 @@ Before you start using Dartblaze, please [enable](https://cloud.google.com/apis/
 - Cloud Run API
 - EventArc API
 
+Dartblaze uses Cloud Run, EventArc and other GCP components to deploy your functions.
+
 ## Setup the CLI
 
 1. [Install the CLI](../cli.md#installation)

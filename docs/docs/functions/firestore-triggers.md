@@ -24,7 +24,7 @@ Each parameter in the path must have a corresponding named parameter in the func
 ```dart
 // ✅ Correct - parameter names match the path
 @OnDocumentCreated('todos/{todoId}/logs/{logId}')
-Future<void> oncreatelog(
+Future<void> onCreateLog(
   DocumentSnapshot snapshot,
   RequestContext context, {
   required String todoId,  // Matches {todoId}
@@ -33,7 +33,7 @@ Future<void> oncreatelog(
 
 // ❌ Incorrect - parameter names don't match
 @OnDocumentCreated('todos/{todoId}')
-Future<void> oncreatelog(
+Future<void> onCreateLog(
   DocumentSnapshot snapshot,
   RequestContext context, {
   required String id,  // Wrong! The parameter name 'id' doesn't match '{todoId}'
@@ -63,7 +63,7 @@ Future<void> functionName(
 **Example:**
 ```dart
 @OnDocumentCreated('todos/{todoId}')
-Future<void> oncreatetodo(
+Future<void> onCreateTodo(
   DocumentSnapshot snapshot,
   RequestContext context,
   {required String todoId}
@@ -95,7 +95,7 @@ Future<void> functionName(
 **Example:**
 ```dart
 @OnDocumentUpdated('todos/{todoId}')
-Future<void> onupdatetodo(
+Future<void> onUpdateTodo(
   UpdateDocumentChange change,
   RequestContext context,
   {required String todoId}
@@ -127,7 +127,7 @@ Future<void> functionName(
 **Example:**
 ```dart
 @OnDocumentDeleted('todos/{todoId}')
-Future<void> ondeletetodo(
+Future<void> onDeleteTodo(
   DocumentSnapshot snapshot,
   RequestContext context,
   {required String todoId}
@@ -158,7 +158,7 @@ Future<void> functionName(
 **Example:**
 ```dart
 @OnDocumentWritten('todos/{todoId}')
-Future<void> onwritetodo(
+Future<void> onWriteTodo(
   WriteDocumentChange change,
   RequestContext context,
   {required String todoId}
@@ -176,7 +176,7 @@ Firestore triggers support monitoring changes in subcollections. When working wi
 **Example:**
 ```dart
 @OnDocumentCreated('todos/{todoId}/logs/{logId}')
-Future<void> oncreatelog(
+Future<void> onCreateLog(
   DocumentSnapshot snapshot,
   RequestContext context, {
   required String todoId,

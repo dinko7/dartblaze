@@ -2,6 +2,9 @@
 
 Dartblaze allows you to write Firebase Cloud Functions in pure Dart, bringing type safety, language, ecosystem, and packages you already know and love from Flutter to the backend.
 
+> **Warning**
+> Dartblaze is not production ready yet. Please use this with caution and don't deploy on production environments.
+
 ## Packages
 
 - [dartblaze](https://pub.dev/packages/dartblaze) - Core parts fo the framework

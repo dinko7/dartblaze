@@ -2,7 +2,7 @@ import 'package:dartblaze/dartblaze.dart';
 import 'package:functions_framework/functions_framework.dart';
 
 @OnDocumentCreated('todos/{todoId}')
-Future<void> oncreatetodo(DocumentSnapshot snapshot, RequestContext context,
+Future<void> onCreateTodo(DocumentSnapshot snapshot, RequestContext context,
     {required String todoId}) async {
   context.logger.debug('todoId: ${todoId}');
   final data = snapshot.data();
@@ -11,7 +11,7 @@ Future<void> oncreatetodo(DocumentSnapshot snapshot, RequestContext context,
 }
 
 @OnDocumentUpdated('todos/{todoId}')
-Future<void> onupdatetodo(UpdateDocumentChange change, RequestContext context,
+Future<void> onUpdateTodo(UpdateDocumentChange change, RequestContext context,
     {required String todoId}) async {
   final before = change.before.data();
   final after = change.after.data();
@@ -21,7 +21,7 @@ Future<void> onupdatetodo(UpdateDocumentChange change, RequestContext context,
 }
 
 @OnDocumentDeleted('todos/{todoId}')
-Future<void> ondeletetodo(DocumentSnapshot snapshot, RequestContext context,
+Future<void> onDeleteTodo(DocumentSnapshot snapshot, RequestContext context,
     {required String todoId}) async {
   final data = snapshot.data();
   context.logger.debug('todoId: $todoId');
@@ -29,7 +29,7 @@ Future<void> ondeletetodo(DocumentSnapshot snapshot, RequestContext context,
 }
 
 @OnDocumentWritten('todos/{todoId}')
-Future<void> onwritetodo(WriteDocumentChange change, RequestContext context,
+Future<void> onWriteTodo(WriteDocumentChange change, RequestContext context,
     {required String todoId}) async {
   final before = change.before?.data();
   final after = change.after?.data();
@@ -39,7 +39,7 @@ Future<void> onwritetodo(WriteDocumentChange change, RequestContext context,
 }
 
 @OnDocumentCreated('todos/{todoId}/logs/{logId}')
-Future<void> oncreatelog(
+Future<void> onCreateLog(
   DocumentSnapshot snapshot,
   RequestContext context, {
   required String todoId,

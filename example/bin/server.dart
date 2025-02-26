@@ -12,61 +12,61 @@ Future<void> main(List<String> args) async {
 }
 
 FunctionTarget? _nameToFunctionTarget(String name) => switch (name) {
-      'oncreatetodo' => FunctionTarget.cloudEventWithContext((event, context) {
+      'onCreateTodo' => FunctionTarget.cloudEventWithContext((event, context) {
           const pathPattern = 'todos/{todoId}';
           final documentIds =
               FirestorePathParser(pathPattern).parse(event.subject!);
           final data =
               FirestoreEventDataFactory(event).build() as DocumentCreatedData;
-          return f0.oncreatetodo(
+          return f0.onCreateTodo(
             data.snapshotOrChange,
             context,
             todoId: documentIds['todoId']!,
           );
         }),
-      'onupdatetodo' => FunctionTarget.cloudEventWithContext((event, context) {
+      'onUpdateTodo' => FunctionTarget.cloudEventWithContext((event, context) {
           const pathPattern = 'todos/{todoId}';
           final documentIds =
               FirestorePathParser(pathPattern).parse(event.subject!);
           final data =
               FirestoreEventDataFactory(event).build() as DocumentUpdatedData;
-          return f0.onupdatetodo(
+          return f0.onUpdateTodo(
             data.snapshotOrChange,
             context,
             todoId: documentIds['todoId']!,
           );
         }),
-      'ondeletetodo' => FunctionTarget.cloudEventWithContext((event, context) {
+      'onDeleteTodo' => FunctionTarget.cloudEventWithContext((event, context) {
           const pathPattern = 'todos/{todoId}';
           final documentIds =
               FirestorePathParser(pathPattern).parse(event.subject!);
           final data =
               FirestoreEventDataFactory(event).build() as DocumentDeletedData;
-          return f0.ondeletetodo(
+          return f0.onDeleteTodo(
             data.snapshotOrChange,
             context,
             todoId: documentIds['todoId']!,
           );
         }),
-      'onwritetodo' => FunctionTarget.cloudEventWithContext((event, context) {
+      'onWriteTodo' => FunctionTarget.cloudEventWithContext((event, context) {
           const pathPattern = 'todos/{todoId}';
           final documentIds =
               FirestorePathParser(pathPattern).parse(event.subject!);
           final data =
               FirestoreEventDataFactory(event).build() as DocumentWrittenData;
-          return f0.onwritetodo(
+          return f0.onWriteTodo(
             data.snapshotOrChange,
             context,
             todoId: documentIds['todoId']!,
           );
         }),
-      'oncreatelog' => FunctionTarget.cloudEventWithContext((event, context) {
+      'onCreateLog' => FunctionTarget.cloudEventWithContext((event, context) {
           const pathPattern = 'todos/{todoId}/logs/{logId}';
           final documentIds =
               FirestorePathParser(pathPattern).parse(event.subject!);
           final data =
               FirestoreEventDataFactory(event).build() as DocumentCreatedData;
-          return f0.oncreatelog(
+          return f0.onCreateLog(
             data.snapshotOrChange,
             context,
             todoId: documentIds['todoId']!,

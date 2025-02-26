@@ -10,7 +10,7 @@ Dartblaze allows you write Firebase Cloud Functions in pure Dart, bringing type 
 <br />
 
 ::: warning
-Dartblaze is not production ready. Please use this with caution and don't deploy on production environments.
+Dartblaze is not production ready yet. Please use this with caution and don't deploy on production environments.
 :::
 
 ## Why Dartblaze?
