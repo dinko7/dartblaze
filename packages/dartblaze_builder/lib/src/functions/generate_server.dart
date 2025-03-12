@@ -48,7 +48,7 @@ Future<void> generateServer(
     ${importDirectives.map((e) => 'import $e;').join('\n')}
     
     Future<void> main(List<String> args) async {
-      initializeAdminApp();
+      initialize();
       await serve(args, _nameToFunctionTarget);
     }
     

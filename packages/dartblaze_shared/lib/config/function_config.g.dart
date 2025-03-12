@@ -25,6 +25,7 @@ FunctionConfig _$FunctionConfigFromJson(Map<String, dynamic> json) =>
       trigger: json['trigger'] == null
           ? null
           : TriggerConfig.fromJson(json['trigger'] as Map<String, dynamic>),
+      public: json['public'] as bool?,
     );
 
 Map<String, dynamic> _$FunctionConfigToJson(FunctionConfig instance) =>
@@ -32,6 +33,7 @@ Map<String, dynamic> _$FunctionConfigToJson(FunctionConfig instance) =>
       'name': instance.name,
       'signatureType': _$SignatureTypeEnumMap[instance.signatureType]!,
       if (instance.trigger case final value?) 'trigger': value,
+      if (instance.public case final value?) 'public': value,
     };
 
 const _$SignatureTypeEnumMap = {

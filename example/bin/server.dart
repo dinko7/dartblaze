@@ -7,7 +7,7 @@ import 'package:example/models/todo.dart';
 import 'package:functions_framework/serve.dart';
 
 Future<void> main(List<String> args) async {
-  initializeAdminApp();
+  initialize();
   await serve(args, _nameToFunctionTarget);
 }
 

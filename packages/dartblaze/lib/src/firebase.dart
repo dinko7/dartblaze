@@ -3,12 +3,16 @@ import 'package:dart_firebase_admin/auth.dart';
 import 'package:dart_firebase_admin/dart_firebase_admin.dart';
 import 'package:dart_firebase_admin/firestore.dart';
 import 'package:dart_firebase_admin/messaging.dart';
+import 'package:dartblaze/src/http/firebase_auth_validator.dart';
+import 'package:http/http.dart' as http;
 
 FirebaseAdminApp? _adminApp;
 
-void initializeAdminApp() {
+Future<void> initialize() async {
+  final projectId = await currentProjectId(
+      platformWrapper: PlatformWrapper(), httpClient: http.Client());
   _adminApp = FirebaseAdminApp.initializeApp(
-    Env.projectId,
+    projectId,
     Credential.fromApplicationDefaultCredentials(),
   );
 }

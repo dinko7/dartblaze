@@ -22,3 +22,7 @@ functions.json
 .firebaserc
 firebase.json
 project.json
+
+# IDE files
+.idea/
+.vscode/
