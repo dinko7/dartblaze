@@ -18,7 +18,8 @@ class Env {
     return env;
   }
 
-  static String get projectId => _projectId!;
+  static String get projectId =>
+      environment == Environment.production ? _projectId! : _env('PROJECT_ID');
 
   static String _env(String key) {
     final value = Platform.environment[key];
