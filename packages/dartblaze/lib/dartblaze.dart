@@ -3,6 +3,9 @@
 /// More dartdocs go here.
 library;
 
+/// Core
+export 'src/environment.dart'; //TODO: remove
+
 /// Firebase
 export "src/firebase.dart";
 
