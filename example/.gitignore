@@ -1,6 +1,7 @@
 # https://dart.dev/guides/libraries/private-files
 # Created by `dart pub`
 .dart_tool/
+pubspec.lock
 
 # logs
 firebase-debug.log
@@ -14,6 +15,7 @@ service-account.json
 # Generated files
 /lib/**/*.freezed.dart
 /lib/**/*.g.dart
+bin/server.dart
 
 # Deployment files
 functions.json
