@@ -112,7 +112,7 @@ extension FirebaseAuthRequestExtension on Request {
   /// ```
   Future<Response> withFirebaseAuth({
     required String projectId,
-    required Future<Response> Function(IdToken idToken) onSuccess,
+    required Future<Response> Function(IdToken idToken) onAuthSuccess,
   }) async {
     // Get auth header
     final authHeader = headers[_authHeaderName];
