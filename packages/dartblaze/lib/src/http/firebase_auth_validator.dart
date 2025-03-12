@@ -132,7 +132,7 @@ extension FirebaseAuthRequestExtension on Request {
       final idToken = await validator.validate(token);
 
       // Call success handler with validated token
-      return await onSuccess(idToken);
+      return await onAuthSuccess(idToken);
     } catch (e) {
       // Return forbidden on validation error
       return Response.forbidden('Invalid or expired token: ${e.toString()}');
