@@ -140,7 +140,7 @@ class HttpFunctionData extends FunctionData {
     for (final param in namedParams) {
       if (param.type.getDisplayString() != 'IdToken') {
         throw InvalidGenerationSourceError(
-          'Named parameters must be of type IdToken',
+          '${namedParams.map((e) => e.type.toString()).join(",")} Named parameters must be of type IdToken (found ${param.type.getDisplayString()})',
           element: param,
         );
       }
