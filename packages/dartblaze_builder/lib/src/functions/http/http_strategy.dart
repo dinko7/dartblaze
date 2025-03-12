@@ -136,12 +136,14 @@ class HttpFunctionData extends FunctionData {
     }
 
     // Check named parameters - only IdToken is allowed
-    final namedParam = params.singleWhere((p) => p.isNamed);
-    if (namedParam.type.getDisplayString() != 'IdToken') {
-      throw InvalidGenerationSourceError(
-        'Named parameter must be of type IdToken (found ${namedParam.type.getDisplayString()})',
-        element: namedParam,
-      );
+    final namedParams = params.where((p) => p.isNamed).toList();
+    for (final param in namedParams) {
+      if (param.type.getDisplayString() != 'IdToken') {
+        throw InvalidGenerationSourceError(
+          'Named parameter must be of type IdToken (found ${param.type.getDisplayString()})',
+          element: param,
+        );
+      }
     }
   }
 }
