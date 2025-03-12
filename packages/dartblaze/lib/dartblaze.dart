@@ -3,7 +3,8 @@
 /// More dartdocs go here.
 library;
 
-/// Firebase
+/// Core
+export 'src/environment.dart';
 export "src/firebase.dart";
 
 /// Firestore
