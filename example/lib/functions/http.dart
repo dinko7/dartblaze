@@ -13,7 +13,7 @@ Future<Response> updateTodo(Todo todo) async {
 Future<Response> updateTodoRequest(Request request) async =>
     request.withFirebaseAuth(
       projectId: Env.projectId,
-      onSuccess: (idToken) async {
+      onAuthSuccess: (idToken) async {
         final todo = await request.body.as(Todo.fromJson);
         firestore.collection('todos').doc(todo.id).update(todo.toJson());
         return Response.ok('Todo updated: ${todo.id}');
