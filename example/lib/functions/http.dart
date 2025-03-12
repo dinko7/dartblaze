@@ -12,7 +12,8 @@ Future<Response> updateTodo(Todo todo) async {
 @Http()
 Future<Response> updateTodoRequest(Request request) async {
   //
-  final authValidator = FirebaseAuthValidator()..init();
+  final authValidator = FirebaseAuthValidator();
+  await authValidator.init();
   final authHeader = request.headers['authorization'];
   if (authHeader == null || !authHeader.startsWith('Bearer ')) {
     return Response.forbidden('Authorization header missing or invalid format');

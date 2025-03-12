@@ -225,23 +225,29 @@ packages:
   dartblaze:
     dependency: "direct main"
     description:
-      path: "../packages/dartblaze"
-      relative: true
-    source: path
+      path: "packages/dartblaze"
+      ref: http-firebase-auth
+      resolved-ref: f27ea1799a604cbd71550f169dc8ce37f661fd11
+      url: "https://github.com/dinko7/dartblaze.git"
+    source: git
     version: "0.0.1"
   dartblaze_builder:
     dependency: "direct dev"
     description:
-      path: "../packages/dartblaze_builder"
-      relative: true
-    source: path
+      path: "packages/dartblaze_builder"
+      ref: http-firebase-auth
+      resolved-ref: f27ea1799a604cbd71550f169dc8ce37f661fd11
+      url: "https://github.com/dinko7/dartblaze.git"
+    source: git
     version: "0.0.2"
   dartblaze_shared:
     dependency: transitive
     description:
-      path: "../packages/dartblaze_shared"
-      relative: true
-    source: path
+      path: "packages/dartblaze_shared"
+      ref: http-firebase-auth
+      resolved-ref: f27ea1799a604cbd71550f169dc8ce37f661fd11
+      url: "https://github.com/dinko7/dartblaze.git"
+    source: git
     version: "0.0.2"
   ed25519_edwards:
     dependency: transitive
