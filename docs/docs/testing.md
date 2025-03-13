@@ -37,7 +37,7 @@ class Todo with _$Todo {
   factory Todo.fromJson(Map<String, dynamic> json) => _$TodoFromJson(json);
 }
 
-@Http()
+@Http(auth:false)
 Future<Response> updateTodo(Todo todo) async {
   firestore.collection('todos').doc(todo.id).update(todo.toJson());
   return Response.ok('Todo updated: ${todo.id}');
@@ -60,3 +60,9 @@ As a result, you should see this in your terminal:
 ```bash
 Todo updated: 123
 ```
+
+::: tip
+All `@Http` functions have Firebase Auth integration enabled by default. This means that the function expects `Authorization: Bearer <token>` header when being called from client.
+
+Check [authorization](./functions/http-functions.md#authentication) section of Http function to see how to get the token.
+:::
