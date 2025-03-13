@@ -9,6 +9,12 @@ Future<Response> updateTodo(Todo todo) async {
   return Response.ok('Todo updated: ${todo.id}');
 }
 
+@Http(auth: false)
+Future<Response> updateTodoNoAuth(Todo todo) async {
+  firestore.collection('todos').doc(todo.id).update(todo.toJson());
+  return Response.ok('Todo updated: ${todo.id}');
+}
+
 @Http()
 Future<Response> updateTodoRequest(
   Request request, {
