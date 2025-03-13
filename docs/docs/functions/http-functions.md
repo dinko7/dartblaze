@@ -78,6 +78,16 @@ Future<Response> updateTodoLogger(Todo todo, RequestLogger logger) async {
 }
 ```
 
+## Authentication
+
+All `@Http` functions have Firebase Auth integration enabled by default. This means that the function expects `Authorization: Bearer <token>` header when being called from client.
+
+Token is Firebase id token, which you can get on the client by calling `await FirebaseAuth.instance.currentUser.getIdToken()`.
+
+You can disable auth for a function in the header: `@Http(auth: false)`.
+
+
+
 ## :warning: Current Limitations
 
 1. **No Body Validation**: The annotation does not currently support automatic request body validation. Validation must be implemented manually within the handler.

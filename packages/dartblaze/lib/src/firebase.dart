@@ -6,7 +6,8 @@ import 'package:dart_firebase_admin/messaging.dart';
 
 FirebaseAdminApp? _adminApp;
 
-void initializeAdminApp() {
+Future<void> initialize() async {
+  await Env.init();
   _adminApp = FirebaseAdminApp.initializeApp(
     Env.projectId,
     Credential.fromApplicationDefaultCredentials(),

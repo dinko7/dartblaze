@@ -2,6 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'project_config.g.dart';
 
+//TODO: get rid of this class completely
 @JsonSerializable()
 class ProjectConfig {
   final String projectId;

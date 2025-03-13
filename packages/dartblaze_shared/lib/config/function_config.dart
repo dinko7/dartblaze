@@ -29,11 +29,13 @@ class FunctionConfig {
   final String name;
   final SignatureType signatureType;
   final TriggerConfig? trigger;
+  final bool? public;
 
   FunctionConfig({
     required this.name,
     required this.signatureType,
     this.trigger,
+    this.public,
   });
 
   factory FunctionConfig.fromJson(Map<String, dynamic> json) =>

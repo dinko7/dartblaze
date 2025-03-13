@@ -14,7 +14,8 @@ abstract class FunctionData {
 
   factory FunctionData.fromFunctionElement(FunctionElement functionElement) {
     final elementAnnotation = functionElement.metadata.single;
-    final annotationType = elementAnnotation.computeConstantValue()!.type!;
+    final annotationValue = elementAnnotation.computeConstantValue()!;
+    final annotationType = annotationValue.type!;
 
     final isHTTPFunction = annotationType.isType(Http);
     final isFirestoreEventFunction = annotationType.isSubtypeOf(FirestoreEvent);
@@ -37,9 +38,13 @@ abstract class FunctionData {
           element: functionElement,
         );
       }
+      final authRequired =
+          annotationValue.getField('auth')?.toBoolValue() ?? true;
+
       return HttpFunctionData.fromFunctionElement(
         functionElement,
         hasRequestLoggerParameter: hasRequestLoggerParameter,
+        authRequired: authRequired,
       );
     } else if (isFirestoreEventFunction) {
       if (hasRequestLoggerParameter) {
