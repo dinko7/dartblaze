@@ -1,3 +1,7 @@
+## 0.0.3
+
+- Support Firebase Auth integration for Http functions
+
 ## 0.0.2
 
 - Update generation for functions config file
