@@ -13,17 +13,9 @@ Welcome to Dartblaze! This guide will help you set up your development environme
 - Firebase project with enabled billing (Blaze plan)
   - [Enable billing guide](https://docs.firerun.io/getting-started/upgrading-from-the-firebase-spark-plan-to-the-blaze-plan-tled)
 - firebase CLI tools installed
-  - [install guide](https://firebase.google.com/docs/cli#install_the_firebase_cli)
+  - [Install guide](https://firebase.google.com/docs/cli#install_the_firebase_cli)
 - gcloud CLI tools installed
-  - [install guide](https://cloud.google.com/sdk/docs/install)
-
-## Google Cloud Platform setup
-
-Before you start using Dartblaze, please [enable](https://cloud.google.com/apis/docs/getting-started#enabling_apis) the following APIs in the GCP console:
-- Cloud Run API
-- EventArc API
-
-Dartblaze uses Cloud Run, EventArc and other GCP components to deploy your functions.
+  - [Install guide](https://cloud.google.com/sdk/docs/install)
 
 ## Setup the CLI
 

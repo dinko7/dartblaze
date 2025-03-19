@@ -86,6 +86,16 @@ Token is Firebase id token, which you can get on the client by calling `await Fi
 
 You can disable auth for a function in the header: `@Http(auth: false)`.
 
+Any signature that has auth enabled can access the IdToken by specifing it as a required named parameter:
+```dart
+@Http()
+Future<Response> updateTodoRequest(
+  Request request, {
+  required IdToken authToken, // IdToken parameter
+}) async {
+  //...
+}
+```
 
 
 ## :warning: Current Limitations

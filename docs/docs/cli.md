@@ -121,7 +121,7 @@ dartblaze init --email <user-email> --project-id <project-id>
 
 ### Description
 
-Initialize a new project with EventArc service account and set up deployment permissions. The email address must be valid and follow standard format.
+Sets up the GCP for a new Dartblaze projects. The email address must be valid and follow standard format.
 
 ### Example
 
